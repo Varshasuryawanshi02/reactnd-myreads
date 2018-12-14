@@ -25,7 +25,7 @@ class BooksApp extends React.Component {
   render() {
     return (
       <div className="app">
-        <Route exact path="/" render={() => (<ListBook books={this.state.Books} onChange={this.updateBooks}/>)}/>
+        <Route exact path="/" render={() => (<BookList books={this.state.Books} onChange={this.updateBooks}/>)}/>
         <Route exact path="/search" render={({history}) => (<BookSearch onChange={this.updateBooks} myBooks={this.state.Books}/>)}/>
       </div>
     )
